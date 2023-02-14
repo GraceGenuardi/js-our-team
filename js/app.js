@@ -44,3 +44,25 @@ for (let member in teamMembers) {
   console.log(`Nome: ${teamMembers[member].nome}, Ruolo: ${teamMembers[member].ruolo}, Foto: ${teamMembers[member].foto}`);
 }
 
+//MILESTONE 2:
+//Stampare le stesse informazioni su DOM sotto forma di stringhe. Metodo document.createElement() per creare un nuovo elemento HTML per ogni membro  + metodo document.appendChild() per aggiungere
+const teamContainer = document.getElementById('team-container');
+
+for (let member in teamMembers) {
+  const memberDiv = document.createElement('div');
+  const nomeP = document.createElement('p');
+  const ruoloP = document.createElement('p');
+  const fotoImg = document.createElement('img');
+
+  nomeP.textContent = `Nome: ${teamMembers[member].nome}`;
+  ruoloP.textContent = `Ruolo: ${teamMembers[member].ruolo}`;
+  fotoImg.src = teamMembers[member].foto;
+
+  memberDiv.appendChild(nomeP);
+  memberDiv.appendChild(ruoloP);
+  memberDiv.appendChild(fotoImg);
+
+  teamContainer.appendChild(memberDiv);
+}
+
+
