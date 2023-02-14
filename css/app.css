@@ -1,7 +1,11 @@
 .sfondo {
-    background-color:#F5F5F1 ;
+    background-color:#F5F5F1;
 }
 
 h1,p {
     color: #2D2D2D;
+}
+
+table {
+    background-color:white;
 }
